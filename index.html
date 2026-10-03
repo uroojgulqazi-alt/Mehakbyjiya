@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MehakByJiya | Your Emotions, Our Creations</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Thoughtful gifts, handcrafted jewellery, jhumky, acrylic fairy-light boxes, and custom picture bouquets in Pakistan. Twin cities fresh rose delivery available.">
+    <meta name="keywords" content="gifts in Pakistan, jewellery Pakistan, gift boxes Pakistan, jhumky Pakistan, custom gifts Pakistan, Islamabad fresh flower delivery, MehakByJiya">
+    <meta property="og:title" content="MehakByJiya - Your Emotions, Our Creations">
+    <meta property="og:description" content="Handcrafted gifting & aesthetic accessories delivered across Pakistan.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Playfair Display for Serif Elegance, Plus Jakarta Sans for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons & Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FDF2F4',
+                            100: '#F9E6E8',
+                            200: '#F3CDD2',
+                            300: '#E8A7B0',
+                            400: '#D97A88',
+                            500: '#C75365',
+                            600: '#A83B4D',
+                            700: '#8A2E3E',
+                            800: '#5C1E2A',
+                            gold: '#D4AF37',
+                            'gold-light': '#F3E5AB',
+                            'gold-dark': '#B38F24',
+                            text: '#2C2224',
+                            muted: '#6B5A5E'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2C2224;
+            background-color: #FAFAFA;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(232, 167, 176, 0.2);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B38F24 0%, #D4AF37 50%, #8A6D14 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #C5A059 0%, #B38F24 100%);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+        }
+
+        .shimmer-bg {
+            background: linear-gradient(120deg, #FDF2F4 0%, #FFFFFF 50%, #F9E6E8 100%);
+            background-size: 200% 200%;
+            animation: shimmer 12s ease infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FDF2F4;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #E8A7B0;
+            border-radius: 10px;
+        }
+
+        /* Toast notification animations */
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .toast-entry {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        .toast-exit {
+            animation: fadeOut 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="shimmer-bg min-h-screen flex flex-col">
+
+    <!-- Sticky Glass Navigation Header -->
+    <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Tagline -->
+                <a href="#home" onclick="navToSection('home')" class="flex flex-col group">
+                    <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-brand-700 group-hover:text-brand-500 transition-colors">
+                        Mehak<span class="text-brand-gold font-normal italic">By</span>Jiya
+                    </span>
+                    <span class="text-[10px] sm:text-xs tracking-widest uppercase font-medium text-brand-muted -mt-1">
+                        Your Emotions, Our Creations
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-brand-text">
+                    <button onclick="navToSection('home')" class="hover:text-brand-600 transition-colors py-2">Home</button>
+                    <button onclick="navToSection('shop')" class="hover:text-brand-600 transition-colors py-2">Shop</button>
+                    <button onclick="navToSection('categories')" class="hover:text-brand-600 transition-colors py-2">Categories</button>
+                    <button onclick="navToSection('custom')" class="hover:text-brand-600 transition-colors py-2">Custom Gifts</button>
+                    <button onclick="navToSection('about')" class="hover:text-brand-600 transition-colors py-2">About Story</button>
+                    <button onclick="navToSection('delivery')" class="hover:text-brand-600 transition-colors py-2">Delivery Info</button>
+                </nav>
+
+                <!-- Header Actions (Search, Admin Doc Modal, Cart) -->
+                <div class="flex items-center space-x-3 sm:space-x-5">
+                    
+                    <!-- Search Input Toggle -->
+                    <button onclick="focusSearch()" title="Search Products" class="p-2 text-brand-text hover:text-brand-600 rounded-full hover:bg-brand-50 transition-colors">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </button>
+
+                    <!-- Admin / Developer Docs Button -->
+                    <button onclick="openDocsModal()" title="Store Setup & Admin Instructions" class="hidden sm:flex items-center space-x-1 text-xs bg-brand-gold/10 text-brand-gold-dark hover:bg-brand-gold/20 px-3 py-1.5 rounded-full border border-brand-gold/30 transition-all font-medium">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <span>Admin Guide</span>
+                    </button>
+
+                    <!-- Cart Drawer Trigger Button -->
+                    <button onclick="toggleCartDrawer()" class="relative p-2.5 bg-brand-100 text-brand-800 rounded-full hover:bg-brand-200 transition-all gold-border-glow">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span id="cartBadge" class="absolute -top-1 -right-1 bg-brand-600 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">
+                            0
+                        </span>
+                    </button>
+
+                    <!-- Mobile Menu Hamburger Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-brand-text hover:text-brand-600 focus:outline-none">
+                        <i id="menuIcon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation Overlay -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-brand-100 px-6 pt-4 pb-6 space-y-3 transition-all">
+            <button onclick="mobileNav('home')" class="block w-full text-left py-2 text-base font-medium text-brand-text border-b border-brand-50">Home</button>
+            <button onclick="mobileNav('shop')" class="block w-full text-left py-2 text-base font-medium text-brand-text border-b border-brand-50">Shop Collection</button>
+            <button onclick="mobileNav('categories')" class="block w-full text-left py-2 text-base font-medium text-brand-text border-b border-brand-50">Categories</button>
+            <button onclick="mobileNav('custom')" class="block w-full text-left py-2 text-base font-medium text-brand-text border-b border-brand-50">Custom Orders</button>
+            <button onclick="mobileNav('about')" class="block w-full text-left py-2 text-base font-medium text-brand-text border-b border-brand-50">About MehakByJiya</button>
+            <button onclick="mobileNav('delivery')" class="block w-full text-left py-2 text-base font-medium text-brand-text border-b border-brand-50">Delivery & FAQs</button>
+            <button onclick="openDocsModal(); toggleMobileMenu();" class="block w-full text-left py-2 text-base font-semibold text-brand-gold-dark flex items-center space-x-2">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Setup & Admin Instructions</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="relative overflow-hidden py-12 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
+                        <div class="inline-flex items-center space-x-2 bg-brand-100/80 border border-brand-300/40 px-4 py-1.5 rounded-full text-brand-700 text-xs sm:text-sm font-semibold shadow-sm">
+                            <i class="fa-solid fa-heart text-brand-500 text-xs"></i>
+                            <span>Handcrafted with Love in Pakistan</span>
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-800 leading-tight">
+                            Your Emotions, <br class="hidden sm:inline"/>
+                            <span class="italic font-normal text-brand-gold-dark">Our Creations</span>
+                        </h1>
+                        
+                        <p class="text-base sm:text-lg text-brand-muted max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                            Thoughtful gifts, delicate jewellery & little aesthetic details made to make someone’s day truly unforgettable. Delivered right to their doorstep.
+                        </p>
+
+                        <!-- Call to Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <button onclick="navToSection('shop')" class="w-full sm:w-auto px-8 py-3.5 bg-brand-600 text-white rounded-full font-medium shadow-lg hover:bg-brand-700 transition-all hover:shadow-brand-300/50 flex items-center justify-center space-x-2">
+                                <span>Shop Collection</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                            
+                            <a href="https://wa.me/923001234567?text=Assalamualaikum%20MehakByJiya!%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 text-white rounded-full font-medium shadow-lg hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="grid grid-cols-2 sm:grid-cols-2 gap-3 pt-6 border-t border-brand-200/50 text-left">
+                            <div class="flex items-center space-x-3 bg-white/70 p-3 rounded-2xl border border-brand-100">
+                                <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-800">Nationwide Shipping</h4>
+                                    <p class="text-[11px] text-brand-muted">All across Pakistan</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3 bg-white/70 p-3 rounded-2xl border border-brand-100">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                                    <i class="fa-solid fa-rose text-emerald-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-800">Fresh Roses</h4>
+                                    <p class="text-[11px] text-brand-muted">Islamabad / Rawalpindi only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual Grid -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
+                            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-300/20 rounded-full blur-2xl"></div>
+                            
+                            <div class="glass-card p-4 rounded-3xl shadow-xl relative z-10 gold-border-glow">
+                                <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80" alt="MehakByJiya Gift Box Showcase" class="w-full h-80 sm:h-96 object-cover rounded-2xl shadow-inner">
+                                <div class="mt-4 p-3 bg-brand-50/80 rounded-xl flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                                        <span class="text-xs font-semibold text-brand-800">Custom & Ready-to-Ship Gifts</span>
+                                    </div>
+                                    <span class="text-xs text-brand-gold-dark font-bold">@mehakbyjiya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Section -->
+        <section id="categories" class="py-12 bg-white/60 border-y border-brand-100/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-brand-800">Explore Categories</h2>
+                    <p class="text-xs sm:text-sm text-brand-muted mt-2">Find the perfect expression for every celebration and milestone</p>
+                </div>
+
+                <!-- Category Cards Grid -->
+                <div id="categoriesGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+                    <!-- Populated dynamically via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Catalog Section -->
+        <section id="shop" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-brand-100 pb-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Catalogue</span>
+                    <h2 class="text-3xl font-serif font-bold text-brand-800">Shop Creations</h2>
+                </div>
+
+                <!-- Filters & Search Toolbar -->
+                <div class="flex flex-wrap items-center gap-3">
+                    
+                    <!-- Search Input -->
+                    <div class="relative flex-1 sm:w-64">
+                        <input type="text" id="searchInput" oninput="filterProducts()" placeholder="Search jhumky, gifts, boxes..." class="w-full pl-9 pr-4 py-2 text-xs bg-white border border-brand-200 rounded-full focus:outline-none focus:border-brand-500 text-brand-text shadow-sm">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-brand-muted text-xs"></i>
+                    </div>
+
+                    <!-- Category Filter Dropdown (Mobile fallback/desktop quick choice) -->
+                    <select id="categorySelect" onchange="filterProducts()" class="py-2 px-3 text-xs bg-white border border-brand-200 rounded-full focus:outline-none text-brand-text shadow-sm">
+                        <option value="All">All Categories</option>
+                        <option value="Jhumky">Jhumky</option>
+                        <option value="Bangles">Bangles</option>
+                        <option value="Jewellery">Jewellery</option>
+                        <option value="Bows & Clips">Bows & Clips</option>
+                        <option value="Gift Boxes">Gift Boxes</option>
+                        <option value="Acrylic Fairy-Light Boxes">Fairy-Light Boxes</option>
+                        <option value="Picture Bouquets">Picture Bouquets</option>
+                        <option value="Chocolate Explosion Boxes">Chocolate Boxes</option>
+                        <option value="Custom Gifts">Custom Gifts</option>
+                    </select>
+
+                    <!-- Sorting Dropdown -->
+                    <select id="sortSelect" onchange="filterProducts()" class="py-2 px-3 text-xs bg-white border border-brand-200 rounded-full focus:outline-none text-brand-text shadow-sm">
+                        <option value="featured">Featured First</option>
+                        <option value="lowToHigh">Price: Low to High</option>
+                        <option value="highToLow">Price: High to Low</option>
+                        <option value="name">Name A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Active Category Pills Row -->
+            <div id="categoryPills" class="flex items-center space-x-2 overflow-x-auto pb-4 custom-scrollbar mb-6">
+                <!-- Populated dynamically via JavaScript -->
+            </div>
+
+            <!-- Products Grid Container -->
+            <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Dynamic product cards will be inserted here -->
+            </div>
+
+            <!-- Empty Filter State -->
+            <div id="emptyShopState" class="hidden text-center py-16 bg-white/50 rounded-3xl border border-dashed border-brand-200 my-8">
+                <i class="fa-solid fa-gift text-4xl text-brand-300 mb-3"></i>
+                <h3 class="text-lg font-bold text-brand-800">No matching creations found</h3>
+                <p class="text-xs text-brand-muted mt-1">Try clearing your search query or picking another category.</p>
+                <button onclick="resetFilters()" class="mt-4 px-5 py-2 bg-brand-100 text-brand-700 rounded-full text-xs font-semibold hover:bg-brand-200 transition-colors">Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Custom Orders Section -->
+        <section id="custom" class="py-16 bg-gradient-to-br from-brand-50 via-white to-brand-100 border-y border-brand-200/50 my-12">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <div class="inline-block p-3 bg-brand-200/40 rounded-full text-brand-700">
+                    <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-800">Have Something Special in Mind?</h2>
+                
+                <p class="text-sm sm:text-base text-brand-muted max-w-2xl mx-auto leading-relaxed">
+                    Tell us what you are imagining and we will help turn it into a thoughtful, handcrafted gift. From custom floral arrangements to personalized acrylic lamps and custom jewellery gift trunks.
+                </p>
+
+                <!-- Custom Inquiry Box Form -->
+                <div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-3xl shadow-xl gold-border-glow text-left space-y-4">
+                    <h3 class="text-lg font-serif font-bold text-brand-800 border-b border-brand-100 pb-3">Bespoke Inquiry Helper</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-brand-muted mb-1">Your Name</label>
+                            <input type="text" id="customName" placeholder="e.g. Ayesha Khan" class="w-full px-3 py-2 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-brand-muted mb-1">Occasion / Event</label>
+                            <input type="text" id="customOccasion" placeholder="Birthday, Anniversary, Nikkah..." class="w-full px-3 py-2 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-brand-muted mb-1">Estimated Budget (PKR)</label>
+                        <select id="customBudget" class="w-full px-3 py-2 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500 text-brand-text">
+                            <option value="Rs. 2,000 - Rs. 4,000">Rs. 2,000 - Rs. 4,000</option>
+                            <option value="Rs. 4,000 - Rs. 8,000">Rs. 4,000 - Rs. 8,000</option>
+                            <option value="Rs. 8,000 - Rs. 15,000">Rs. 8,000 - Rs. 15,000</option>
+                            <option value="Rs. 15,000+ Luxury Arrangement">Rs. 15,000+ Luxury Box</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-brand-muted mb-1">Describe Your Gift Idea</label>
+                        <textarea id="customIdea" rows="3" placeholder="Specify colors, preferred items, acrylic engraving names, or fresh flower preferences..." class="w-full px-3 py-2 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500"></textarea>
+                    </div>
+
+                    <button onclick="sendCustomInquiry()" class="w-full py-3.5 bg-emerald-600 text-white rounded-xl font-semibold shadow-md hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2 text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Discuss Your Custom Order on WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery Information Accordion Section -->
+        <section id="delivery" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Important Details</span>
+                <h2 class="text-3xl font-serif font-bold text-brand-800">Delivery & Ordering Information</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-3xl border border-brand-100 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-bold">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-800">Pakistan-Wide Shipping</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        We deliver non-perishable custom gifts, jewellery, jhumky, acrylic LED frames, and explosion boxes across all cities in Pakistan through reliable express couriers.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-emerald-100 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-800">Fresh Rose Arrangements</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        To preserve floral freshness, fresh rose bouquets and fresh floral gift boxes are strictly limited to hand-delivery in <span class="font-bold text-brand-800">Islamabad & Rawalpindi</span> only.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-brand-100 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-bold">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-800">7 - 10 Days Advance Order</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Because each piece is crafted with delicate handwork and custom personalization, orders should preferably be placed 7–10 days prior to your occasion date.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-brand-100 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-bold">
+                        <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-800">WhatsApp Confirmation</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Delivery charges may vary based on package dimensions and delivery location. Final details and delivery dates are confirmed directly over WhatsApp conversation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white/80 border-t border-brand-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold-dark">Our Story</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-800">About MehakByJiya</h2>
+                
+                <div class="relative py-4">
+                    <i class="fa-solid fa-quote-left text-3xl text-brand-200 absolute -top-2 left-10"></i>
+                    <p class="text-lg sm:text-xl font-serif italic text-brand-700 leading-relaxed px-8">
+                        "MehakByJiya is a small gifting and accessories brand created around one simple idea: emotions deserve to be expressed beautifully."
+                    </p>
+                </div>
+
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed max-w-2xl mx-auto">
+                    What started as a passion for delicate handiwork has grown into a small independent brand dedicated to turning life's cherished moments into tangible keepsakes. Whether it is traditional Kundan jhumky, personalized fairy-light acrylic boxes, or velvet floral trays, every single piece is prepared with utmost care and affection in Pakistan.
+                </p>
+
+                <div class="pt-4 flex items-center justify-center space-x-6 text-brand-muted text-sm">
+                    <a href="https://instagram.com/mehakbyjiya" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 flex items-center space-x-2">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>@mehakbyjiya</span>
+                    </a>
+                    <a href="https://tiktok.com/@mehakbyjiya" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 flex items-center space-x-2">
+                        <i class="fa-brands fa-tiktok text-lg"></i>
+                        <span>@mehakbyjiya</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-800 text-white border-t border-brand-700 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-brand-700">
+                
+                <!-- Brand Info Column -->
+                <div class="space-y-3">
+                    <h3 class="font-serif text-2xl font-bold tracking-tight text-white">
+                        Mehak<span class="text-brand-gold italic">By</span>Jiya
+                    </h3>
+                    <p class="text-xs text-brand-200 leading-relaxed">
+                        “Your Emotions, Our Creations”
+                    </p>
+                    <p class="text-xs text-brand-300">
+                        Handcrafted gifting & aesthetic accessories based in Pakistan.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-gold mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-brand-200">
+                        <li><button onclick="navToSection('home')" class="hover:text-white transition-colors">Home</button></li>
+                        <li><button onclick="navToSection('shop')" class="hover:text-white transition-colors">Shop Catalogue</button></li>
+                        <li><button onclick="navToSection('categories')" class="hover:text-white transition-colors">Categories</button></li>
+                        <li><button onclick="navToSection('custom')" class="hover:text-white transition-colors">Custom Orders</button></li>
+                    </ul>
+                </div>
+
+                <!-- Information Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-gold mb-3">Customer Care</h4>
+                    <ul class="space-y-2 text-xs text-brand-200">
+                        <li><button onclick="navToSection('delivery')" class="hover:text-white transition-colors">Delivery Guidelines</button></li>
+                        <li><button onclick="navToSection('about')" class="hover:text-white transition-colors">Brand Story</button></li>
+                        <li><button onclick="openDocsModal()" class="hover:text-white transition-colors text-brand-gold">Developer & Admin Guide</button></li>
+                    </ul>
+                </div>
+
+                <!-- Social & WhatsApp -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Connect With Us</h4>
+                    <div class="flex space-x-3 text-lg">
+                        <a href="https://instagram.com/mehakbyjiya" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-700 hover:bg-brand-600 flex items-center justify-center transition-colors" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@mehakbyjiya" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-700 hover:bg-brand-600 flex items-center justify-center transition-colors" title="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-emerald-600 hover:bg-emerald-500 flex items-center justify-center transition-colors" title="WhatsApp Direct">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <p class="text-[11px] text-brand-300">
+                        Official Handle: <span class="text-white font-medium">@mehakbyjiya</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-300">
+                <p>&copy; 2026 MehakByJiya. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0 italic">Handcrafted with care in Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT QUICK VIEW & DETAILS MODAL -->
+    <div id="productModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative gold-border-glow my-8">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 w-9 h-9 bg-brand-50 rounded-full flex items-center justify-center text-brand-700 hover:bg-brand-100 transition-colors z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div id="modalContent" class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Dynamically filled via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CART SLIDE-OVER DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
+        <div onclick="toggleCartDrawer()" class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col justify-between">
+            
+            <!-- Cart Header -->
+            <div class="p-5 bg-brand-50 border-b border-brand-100 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-bag-shopping text-brand-600 text-xl"></i>
+                    <h3 class="font-serif font-bold text-lg text-brand-800">Your Shopping Bag</h3>
+                </div>
+                <button onclick="toggleCartDrawer()" class="p-2 text-brand-muted hover:text-brand-800">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div id="cartItemsList" class="flex-grow overflow-y-auto p-5 space-y-4 custom-scrollbar">
+                <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Empty Cart Fallback -->
+            <div id="emptyCartView" class="hidden flex-grow flex flex-col items-center justify-center p-6 text-center">
+                <i class="fa-solid fa-bag-shopping text-5xl text-brand-200 mb-3"></i>
+                <h4 class="font-serif text-lg font-bold text-brand-800">Your Cart is Empty</h4>
+                <p class="text-xs text-brand-muted mt-1 mb-4">Discover our handcrafted jewellery and gifts to start adding items.</p>
+                <button onclick="toggleCartDrawer(); navToSection('shop');" class="px-6 py-2.5 bg-brand-600 text-white rounded-full text-xs font-semibold hover:bg-brand-700">Explore Shop</button>
+            </div>
+
+            <!-- Cart Checkout Form & Summary Panel -->
+            <div id="cartCheckoutPanel" class="p-5 border-t border-brand-100 bg-white space-y-3">
+                <div class="space-y-1 text-xs">
+                    <div class="flex justify-between text-brand-muted">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal" class="font-semibold text-brand-800">Rs. 0</span>
+                    </div>
+                    <div class="flex justify-between text-brand-muted">
+                        <span>Estimated Shipping</span>
+                        <span class="font-medium text-brand-800">Rs. 250 (Flat)</span>
+                    </div>
+                    <div class="flex justify-between text-sm font-bold text-brand-800 pt-2 border-t border-brand-100">
+                        <span>Total Amount</span>
+                        <span id="cartGrandTotal" class="text-brand-600">Rs. 250</span>
+                    </div>
+                </div>
+
+                <!-- Customer Details Form for WhatsApp Generator -->
+                <div class="space-y-2 pt-2 border-t border-brand-100">
+                    <p class="text-[11px] font-bold uppercase tracking-wider text-brand-gold-dark">Delivery Address Info</p>
+                    <input type="text" id="orderName" placeholder="Full Name *" class="w-full px-3 py-1.5 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500">
+                    <input type="tel" id="orderPhone" placeholder="WhatsApp Phone Number *" class="w-full px-3 py-1.5 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500">
+                    <input type="text" id="orderAddress" placeholder="Complete Street Address *" class="w-full px-3 py-1.5 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500">
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <select id="orderCity" class="px-3 py-1.5 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500 text-brand-text">
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Quetta">Quetta</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Other City">Other City</option>
+                        </select>
+                        <input type="date" id="orderDate" class="px-3 py-1.5 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500 text-brand-text">
+                    </div>
+                    <input type="text" id="orderNote" placeholder="Gift Note / Special Instructions (Optional)" class="w-full px-3 py-1.5 text-xs border border-brand-200 rounded-lg focus:outline-none focus:border-brand-500">
+                </div>
+
+                <div class="pt-2 space-y-2">
+                    <button onclick="checkoutOnWhatsApp()" class="w-full py-3 bg-emerald-600 text-white rounded-xl font-bold hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2 shadow-md text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Checkout / Order on WhatsApp</span>
+                    </button>
+                    <button onclick="clearCart()" class="w-full py-1.5 text-[11px] text-brand-muted hover:text-red-500 transition-colors">Clear Shopping Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STORE ADMIN & SETUP GUIDE MODAL (README) -->
+    <div id="docsModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden relative border border-brand-gold/40 my-8">
+            
+            <div class="bg-brand-800 text-white p-6 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-gear text-brand-gold text-2xl"></i>
+                    <div>
+                        <h3 class="font-serif font-bold text-xl">Store Setup & Developer README</h3>
+                        <p class="text-xs text-brand-200">Instructions for MehakByJiya Website Customization</p>
+                    </div>
+                </div>
+                <button onclick="closeDocsModal()" class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center hover:bg-brand-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="p-6 sm:p-8 overflow-y-auto max-h-[75vh] space-y-6 text-xs text-brand-text leading-relaxed custom-scrollbar">
+                
+                <!-- Section 1: Changing WhatsApp -->
+                <div class="bg-brand-50 p-4 rounded-2xl border border-brand-200">
+                    <h4 class="font-bold text-sm text-brand-800 flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+                        <span>1. How to Update the WhatsApp Number</span>
+                    </h4>
+                    <p class="mt-1 text-brand-muted">
+                        At the top of the JavaScript code inside this file, locate the variable declaration:
+                    </p>
+                    <code class="block bg-brand-800 text-brand-gold-light p-2.5 rounded-lg my-2 font-mono text-[11px]">
+                        const WHATSAPP_NUMBER = "923001234567";
+                    </code>
+                    <p class="text-brand-muted">
+                        Replace <code class="bg-brand-200 px-1 rounded">923001234567</code> with your business's active phone number including the country code (without <code class="bg-brand-200 px-1 rounded">+</code> or dashes).
+                    </p>
+                </div>
+
+                <!-- Section 2: Products Editing -->
+                <div class="bg-brand-50 p-4 rounded-2xl border border-brand-200">
+                    <h4 class="font-bold text-sm text-brand-800 flex items-center space-x-2">
+                        <i class="fa-solid fa-boxes-packing text-brand-600 text-base"></i>
+                        <span>2. How to Add or Modify Products</span>
+                    </h4>
+                    <p class="mt-1 text-brand-muted">
+                        All product data is stored in the data-driven JavaScript array <code class="bg-brand-200 px-1 rounded">PRODUCTS_DATA</code>. You can add new objects to the list following this schema:
+                    </p>
+                    <pre class="bg-brand-800 text-brand-200 p-3 rounded-lg my-2 font-mono text-[11px] overflow-x-auto">
+{
+  id: "mbj-013",
+  name: "Custom Floral Resin Coaster",
+  category: "Custom Gifts",
+  price: 1850,
+  image: "https://images.unsplash.com/...",
+  description: "Hand-poured resin with pressed real flowers.",
+  isFreshFlower: false,
+  badge: "New Arrival",
+  rating: 5.0
+}</pre>
+                </div>
+
+                <!-- Section 3: Image Replacement -->
+                <div class="bg-brand-50 p-4 rounded-2xl border border-brand-200">
+                    <h4 class="font-bold text-sm text-brand-800 flex items-center space-x-2">
+                        <i class="fa-solid fa-image text-brand-gold-dark text-base"></i>
+                        <span>3. How to Replace Images</span>
+                    </h4>
+                    <p class="text-brand-muted">
+                        You can replace the demo image URLs with direct web URLs or relative image paths (e.g., <code class="bg-brand-200 px-1 rounded">images/products/jhumky-1.jpg</code>) if hosted in your local repository.
+                    </p>
+                </div>
+
+                <!-- Section 4: GitHub Pages Deployment -->
+                <div class="bg-brand-50 p-4 rounded-2xl border border-brand-200">
+                    <h4 class="font-bold text-sm text-brand-800 flex items-center space-x-2">
+                        <i class="fa-brands fa-github text-brand-800 text-base"></i>
+                        <span>4. How to Deploy on GitHub Pages</span>
+                    </h4>
+                    <ol class="list-decimal list-inside space-y-1 mt-1 text-brand-muted">
+                        <li>Create a GitHub repository named <code class="bg-brand-200 px-1 rounded">mehakbyjiya</code>.</li>
+                        <li>Upload this file as <code class="bg-brand-200 px-1 rounded">index.html</code> into the main root folder.</li>
+                        <li>Navigate to Repository <strong>Settings &gt; Pages</strong>.</li>
+                        <li>Set the Source Branch to <code class="bg-brand-200 px-1 rounded">main</code> / <code class="bg-brand-200 px-1 rounded">root</code> and click <strong>Save</strong>.</li>
+                        <li>Your store will be live in minutes at <code class="bg-brand-200 px-1 rounded">https://username.github.io/mehakbyjiya</code>.</li>
+                    </ol>
+                </div>
+
+                <!-- Section 5: Folder Structure Breakdown -->
+                <div class="bg-brand-50 p-4 rounded-2xl border border-brand-200">
+                    <h4 class="font-bold text-sm text-brand-800 flex items-center space-x-2">
+                        <i class="fa-solid fa-folder-tree text-brand-600 text-base"></i>
+                        <span>5. Recommended Multi-File Folder Structure</span>
+                    </h4>
+                    <p class="text-brand-muted mb-2">If you wish to split this single-file setup into modular files later:</p>
+                    <pre class="bg-brand-800 text-emerald-300 p-3 rounded-lg font-mono text-[11px]">
+/
+├── index.html         (Home, Hero, Story, Contact)
+├── shop.html          (Catalogue Grid & Search)
+├── about.html         (Brand Story & Details)
+├── contact.html       (Contact Info & Socials)
+├── css/
+│   └── style.css      (Custom Styles & Colors)
+├── js/
+│   ├── products.js    (PRODUCTS_DATA dataset)
+│   └── script.js      (Cart, LocalStorage & WhatsApp logic)
+└── README.md          (Documentation)</pre>
+                </div>
+
+            </div>
+
+            <div class="p-4 bg-brand-100 flex justify-end">
+                <button onclick="closeDocsModal()" class="px-5 py-2 bg-brand-700 text-white font-semibold rounded-xl text-xs hover:bg-brand-800">Close Instructions</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+    <!-- JavaScript Application Core -->
+    <script>
+        /* ==========================================================================
+           1. CONFIGURATION & CONSTANTS
+           ========================================================================== */
+        // EDITABLE WHATSAPP NUMBER (Pakistan country code +92 without leading zero or +)
+        const WHATSAPP_NUMBER = "923001234567";
+
+        // CATEGORY LIST
+        const CATEGORIES = [
+            { name: "Jhumky", icon: "fa-gem" },
+            { name: "Bangles", icon: "fa-ring" },
+            { name: "Jewellery", icon: "fa-sparkles" },
+            { name: "Bows & Clips", icon: "fa-ribbon" },
+            { name: "Gift Boxes", icon: "fa-box-open" },
+            { name: "Acrylic Fairy-Light Boxes", icon: "fa-lightbulb" },
+            { name: "Picture Bouquets", icon: "fa-camera-retro" },
+            { name: "Chocolate Explosion Boxes", icon: "fa-gift" },
+            { name: "Custom Gifts", icon: "fa-wand-magic-sparkles" }
+        ];
+
+        /* ==========================================================================
+           2. DATA-DRIVEN PRODUCT CATALOGUE (Sample Products for MehakByJiya)
+           ========================================================================== */
+        const PRODUCTS_DATA = [
+            {
+                id: "mbj-001",
+                name: "Royal Velvet Kundan Jhumky",
+                category: "Jhumky",
+                price: 2450,
+                image: "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=80",
+                description: "Hand-set pearl drop Kundan jhumky crafted with lightweight antique gold finish. Perfect for weddings and festivities.",
+                isFreshFlower: false,
+                badge: "Best Seller",
+                rating: 4.9
+            },
+            {
+                id: "mbj-002",
+                name: "Rose & Fairy-Light Acrylic Lamp Box",
+                category: "Acrylic Fairy-Light Boxes",
+                price: 4200,
+                image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80",
+                description: "Warm glowing fairy lights wrapped around everlasting preserved roses inside a crystal acrylic laser-etched frame.",
+                isFreshFlower: false,
+                badge: "Top Gift",
+                rating: 5.0
+            },
+            {
+                id: "mbj-003",
+                name: "Fresh Red Rose & Pearl Tray (Twin Cities)",
+                category: "Gift Boxes",
+                price: 5500,
+                image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80",
+                description: "Handpicked premium red roses arranged with faux pearls in a velvet keepsake tray. Strictly available for Islamabad & Rawalpindi delivery.",
+                isFreshFlower: true,
+                badge: "ISB/RWP Only",
+                rating: 4.8
+            },
+            {
+                id: "mbj-004",
+                name: "Classic Silk Hair Bow & Pearl Clip Set",
+                category: "Bows & Clips",
+                price: 1450,
+                image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80",
+                description: "Hand-stitched dusty pink satin silk bow attached to an alligator clip, accompanied by 2 floral pearl hairpins.",
+                isFreshFlower: false,
+                badge: "Cute Detail",
+                rating: 4.7
+            },
+            {
+                id: "mbj-005",
+                name: "3-Tier Chocolate Explosion Gift Box",
+                category: "Chocolate Explosion Boxes",
+                price: 3800,
+                image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80",
+                description: "Interactive multi-layer box featuring premium imported chocolates and space for 8 personalized mini photographs.",
+                isFreshFlower: false,
+                badge: "Popular",
+                rating: 4.9
+            },
+            {
+                id: "mbj-006",
+                name: "Personalized Memory Picture Bouquet",
+                category: "Picture Bouquets",
+                price: 3200,
+                image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80",
+                description: "Handmade paper flower bouquet interleaved with 10 print memory cards and delicate glitter butterflies.",
+                isFreshFlower: false,
+                badge: "Customizable",
+                rating: 4.8
+            },
+            {
+                id: "mbj-007",
+                name: "Glass Churi Box with Floral Embellishments",
+                category: "Bangles",
+                price: 2800,
+                image: "https://images.unsplash.com/photo-1611591475179-420d25f2d449?auto=format&fit=crop&w=800&q=80",
+                description: "Aesthetic glass bangles color-coordinated in a luxury clear acrylic presentation box with custom ribbon bow.",
+                isFreshFlower: false,
+                badge: "Traditional",
+                rating: 4.6
+            },
+            {
+                id: "mbj-008",
+                name: "Minimalist Zircon Pendant & Earring Set",
+                category: "Jewellery",
+                price: 2950,
+                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+                description: "Delicate rose-gold plated zircon crystal chain necklace with matching stud earrings. Anti-tarnish coated.",
+                isFreshFlower: false,
+                badge: "Luxury",
+                rating: 4.9
+            },
+            {
+                id: "mbj-009",
+                name: "Custom Name Acrylic LED Night Light",
+                category: "Custom Gifts",
+                price: 3400,
+                image: "https://images.unsplash.com/photo-1517999186661-ac0f0ab6740f?auto=format&fit=crop&w=800&q=80",
+                description: "Custom laser-engraved name or romantic quote on clear acrylic plate with a solid wooden warm light base.",
+                isFreshFlower: false,
+                badge: "Bespoke",
+                rating: 5.0
+            },
+            {
+                id: "mbj-010",
+                name: "Meenakari Chandbali Jhumky",
+                category: "Jhumky",
+                price: 1950,
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+                description: "Intricate pink hand-painted enamel Meenakari work with golden bead fringes.",
+                isFreshFlower: false,
+                badge: "Handcrafted",
+                rating: 4.7
+            },
+            {
+                id: "mbj-011",
+                name: "Pastel Satin Scrunchie & Hair Clip Box",
+                category: "Bows & Clips",
+                price: 1200,
+                image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=800&q=80",
+                description: "Gift-ready box containing 4 silk scrunchies and 2 aesthetic acrylic hair claws.",
+                isFreshFlower: false,
+                badge: "Daily Essential",
+                rating: 4.5
+            },
+            {
+                id: "mbj-012",
+                name: "Luxury Velvet Flower Hamper (ISB/RWP)",
+                category: "Gift Boxes",
+                price: 7800,
+                image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=800&q=80",
+                description: "Grand velvet hamper filled with fresh red roses, chocolates, and personalized message card. Twin Cities delivery only.",
+                isFreshFlower: true,
+                badge: "Grand Luxury",
+                rating: 5.0
+            }
+        ];
+
+        /* ==========================================================================
+           3. APPLICATION STATE & LOCALSTORAGE
+           ========================================================================== */
+        let cart = [];
+        let activeCategory = "All";
+        let activeProductModal = null;
+
+        // Load cart on page initialization
+        function initCart() {
+            try {
+                const savedCart = localStorage.getItem("mehakbyjiya_cart");
+                if (savedCart) {
+                    cart = JSON.parse(savedCart);
+                }
+            } catch (e) {
+                console.error("Could not load cart from localStorage", e);
+                cart = [];
+            }
+            updateCartUI();
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem("mehakbyjiya_cart", JSON.stringify(cart));
+            } catch (e) {
+                console.error("Could not save cart", e);
+            }
+            updateCartUI();
+        }
+
+        /* ==========================================================================
+           4. NAVIGATION & MODALS
+           ========================================================================== */
+        function navToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function mobileNav(sectionId) {
+            toggleMobileMenu();
+            navToSection(sectionId);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobileMenu");
+            const icon = document.getElementById("menuIcon");
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                icon.className = "fa-solid fa-bars text-2xl";
+            } else {
+                icon.className = "fa-solid fa-xmark text-2xl";
+            }
+        }
+
+        function focusSearch() {
+            navToSection("shop");
+            setTimeout(() => {
+                const searchInput = document.getElementById("searchInput");
+                if (searchInput) searchInput.focus();
+            }, 300);
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById("cartDrawer");
+            drawer.classList.toggle("hidden");
+        }
+
+        function openDocsModal() {
+            document.getElementById("docsModal").classList.remove("hidden");
+        }
+
+        function closeDocsModal() {
+            document.getElementById("docsModal").classList.add("hidden");
+        }
+
+        /* ==========================================================================
+           5. RENDERING DYNAMIC CONTENT (Categories & Shop Products)
+           ========================================================================== */
+        function renderCategories() {
+            const container = document.getElementById("categoriesGrid");
+            const pillsContainer = document.getElementById("categoryPills");
+            if (!container || !pillsContainer) return;
+
+            // Render category cards grid
+            container.innerHTML = CATEGORIES.map(cat => `
+                <div onclick="selectCategory('${cat.name}')" class="bg-white p-4 rounded-2xl border border-brand-100 hover:border-brand-gold hover:shadow-md transition-all cursor-pointer text-center group">
+                    <div class="w-10 h-10 mx-auto rounded-full bg-brand-50 group-hover:bg-brand-100 flex items-center justify-center text-brand-600 transition-colors">
+                        <i class="fa-solid ${cat.icon} text-lg"></i>
+                    </div>
+                    <h4 class="text-xs font-bold text-brand-800 mt-2">${cat.name}</h4>
+                </div>
+            `).join('');
+
+            // Render filter pills
+            let pillsHtml = `<button onclick="selectCategory('All')" class="px-4 py-1.5 text-xs font-semibold rounded-full whitespace-nowrap transition-all ${activeCategory === 'All' ? 'bg-brand-600 text-white shadow-sm' : 'bg-white text-brand-text border border-brand-200 hover:bg-brand-50'}">All Products</button>`;
+            
+            pillsHtml += CATEGORIES.map(cat => `
+                <button onclick="selectCategory('${cat.name}')" class="px-4 py-1.5 text-xs font-semibold rounded-full whitespace-nowrap transition-all ${activeCategory === cat.name ? 'bg-brand-600 text-white shadow-sm' : 'bg-white text-brand-text border border-brand-200 hover:bg-brand-50'}">
+                    ${cat.name}
+                </button>
+            `).join('');
+
+            pillsContainer.innerHTML = pillsHtml;
+        }
+
+        function selectCategory(catName) {
+            activeCategory = catName;
+            const selectEl = document.getElementById("categorySelect");
+            if (selectEl) selectEl.value = catName;
+            renderCategories();
+            filterProducts();
+            navToSection("shop");
+        }
+
+        function filterProducts() {
+            const searchVal = (document.getElementById("searchInput")?.value || "").toLowerCase().trim();
+            const categoryVal = document.getElementById("categorySelect")?.value || activeCategory;
+            const sortVal = document.getElementById("sortSelect")?.value || "featured";
+
+            let filtered = PRODUCTS_DATA.filter(p => {
+                const matchesSearch = p.name.toLowerCase().includes(searchVal) || p.description.toLowerCase().includes(searchVal) || p.category.toLowerCase().includes(searchVal);
+                const matchesCat = (categoryVal === "All") || (p.category === categoryVal);
+                return matchesSearch && matchesCat;
+            });
+
+            // Sorting logic
+            if (sortVal === "lowToHigh") {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === "highToLow") {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (sortVal === "name") {
+                filtered.sort((a, b) => a.name.localeCompare(b.name));
+            }
+
+            renderProductGrid(filtered);
+        }
+
+        function renderProductGrid(products) {
+            const container = document.getElementById("productsGrid");
+            const emptyState = document.getElementById("emptyShopState");
+            if (!container) return;
+
+            if (products.length === 0) {
+                container.innerHTML = "";
+                if (emptyState) emptyState.classList.remove("hidden");
+                return;
+            } else {
+                if (emptyState) emptyState.classList.add("hidden");
+            }
+
+            container.innerHTML = products.map(p => `
+                <div class="glass-card rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative overflow-hidden cursor-pointer" onclick="openProductModal('${p.id}')">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500">
+                        
+                        <div class="absolute top-3 left-3 flex flex-col gap-1">
+                            <span class="bg-white/90 backdrop-blur-xs text-brand-800 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-brand-100">
+                                ${p.badge}
+                            </span>
+                            ${p.isFreshFlower ? `
+                                <span class="bg-emerald-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-xs flex items-center space-x-1">
+                                    <i class="fa-solid fa-rose"></i>
+                                    <span>Twin Cities Only</span>
+                                </span>
+                            ` : ''}
+                        </div>
+
+                        <button class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-white/90 text-brand-700 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors shadow-md">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+                        <div>
+                            <span class="text-[11px] font-semibold text-brand-gold-dark uppercase tracking-wider">${p.category}</span>
+                            <h3 onclick="openProductModal('${p.id}')" class="font-serif font-bold text-base text-brand-800 hover:text-brand-600 transition-colors cursor-pointer line-clamp-1 mt-0.5">
+                                ${p.name}
+                            </h3>
+                            <p class="text-xs text-brand-muted line-clamp-2 mt-1 leading-relaxed">${p.description}</p>
+                        </div>
+
+                        <div class="pt-2 border-t border-brand-100/60 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-brand-muted font-light">Price</span>
+                                <p class="text-sm font-bold text-brand-800">Rs. ${p.price.toLocaleString()}</p>
+                            </div>
+
+                            <div class="flex items-center space-x-1.5">
+                                <button onclick="addToCart('${p.id}')" class="px-3.5 py-2 bg-brand-100 text-brand-800 hover:bg-brand-200 text-xs font-semibold rounded-full transition-colors">
+                                    + Add
+                                </button>
+                                <button onclick="directOrderWhatsApp('${p.id}')" class="p-2 bg-emerald-600 text-white hover:bg-emerald-700 rounded-full transition-colors" title="Instant WhatsApp Order">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function resetFilters() {
+            document.getElementById("searchInput").value = "";
+            activeCategory = "All";
+            document.getElementById("categorySelect").value = "All";
+            document.getElementById("sortSelect").value = "featured";
+            renderCategories();
+            filterProducts();
+        }
+
+        /* ==========================================================================
+           6. PRODUCT DETAILS MODAL LOGIC
+           ========================================================================== */
+        function openProductModal(productId) {
+            const product = PRODUCTS_DATA.find(p => p.id === productId);
+            if (!product) return;
+            activeProductModal = product;
+
+            const modalContent = document.getElementById("modalContent");
+            modalContent.innerHTML = `
+                <div class="p-6 bg-brand-50 flex items-center justify-center">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+                </div>
+
+                <div class="p-6 sm:p-8 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">${product.category}</span>
+                            <div class="flex items-center space-x-1 text-amber-500 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="font-bold text-brand-800">${product.rating}</span>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-serif font-bold text-brand-800 mt-1">${product.name}</h2>
+                        <p class="text-xl font-bold text-brand-600 mt-2">Rs. ${product.price.toLocaleString()}</p>
+                        
+                        <p class="text-xs text-brand-muted leading-relaxed mt-3">${product.description}</p>
+
+                        ${product.isFreshFlower ? `
+                            <div class="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start space-x-2 text-xs text-emerald-800">
+                                <i class="fa-solid fa-circle-info text-emerald-600 mt-0.5"></i>
+                                <span><strong>Fresh Flower Notice:</strong> This item contains fresh roses and is only deliverable within Islamabad and Rawalpindi.</span>
+                            </div>
+                        ` : ''}
+
+                        <div class="mt-4 space-y-2">
+                            <label class="block text-xs font-semibold text-brand-800">Select Options / Finish</label>
+                            <select id="modalVariant" class="w-full px-3 py-2 text-xs border border-brand-200 rounded-lg focus:outline-none">
+                                <option value="Standard Finish">Standard Gift Finishing</option>
+                                <option value="Gold Accent">Gold Ribbon Accent</option>
+                                <option value="Silver Accent">Silver Ribbon Accent</option>
+                            </select>
+                        </div>
+
+                        <div class="mt-4 flex items-center space-x-3">
+                            <label class="text-xs font-semibold text-brand-800">Quantity:</label>
+                            <div class="flex items-center border border-brand-200 rounded-lg overflow-hidden bg-white">
+                                <button onclick="adjustModalQty(-1)" class="px-3 py-1 bg-brand-50 text-brand-800 hover:bg-brand-100 text-xs font-bold">-</button>
+                                <span id="modalQtyVal" class="px-4 text-xs font-bold">1</span>
+                                <button onclick="adjustModalQty(1)" class="px-3 py-1 bg-brand-50 text-brand-800 hover:bg-brand-100 text-xs font-bold">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-brand-100 space-y-2">
+                        <button onclick="addModalItemToCart()" class="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl hover:bg-brand-700 transition-colors text-xs flex items-center justify-center space-x-2 shadow-md">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Add to Bag</span>
+                        </button>
+
+                        <button onclick="directOrderWhatsApp('${product.id}')" class="w-full py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors text-xs flex items-center justify-center space-x-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Instant Order via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById("productModal").classList.remove("hidden");
+        }
+
+        function closeProductModal() {
+            document.getElementById("productModal").classList.add("hidden");
+            activeProductModal = null;
+        }
+
+        let modalQty = 1;
+        function adjustModalQty(delta) {
+            modalQty = Math.max(1, modalQty + delta);
+            const qtySpan = document.getElementById("modalQtyVal");
+            if (qtySpan) qtySpan.textContent = modalQty;
+        }
+
+        function addModalItemToCart() {
+            if (!activeProductModal) return;
+            const variant = document.getElementById("modalVariant")?.value || "Standard";
+            addToCart(activeProductModal.id, modalQty, variant);
+            closeProductModal();
+            modalQty = 1;
+        }
+
+        /* ==========================================================================
+           7. SHOPPING CART SYSTEM & LOCALSTORAGE PERSISTENCE
+           ========================================================================== */
+        function addToCart(productId, qty = 1, variant = "Standard Finish") {
+            const product = PRODUCTS_DATA.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingIndex = cart.findIndex(item => item.id === productId && item.variant === variant);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += qty;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    category: product.category,
+                    variant: variant,
+                    qty: qty
+                });
+            }
+
+            saveCart();
+            showToast(`Added "${product.name}" to cart`);
+        }
+
+        function updateCartQty(index, delta) {
+            if (cart[index]) {
+                cart[index].qty += delta;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+                saveCart();
+            }
+        }
+
+        function removeFromCart(index) {
+            if (cart[index]) {
+                const name = cart[index].name;
+                cart.splice(index, 1);
+                saveCart();
+                showToast(`Removed "${name}"`);
+            }
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+            showToast("Cart cleared");
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById("cartBadge");
+            const list = document.getElementById("cartItemsList");
+            const emptyView = document.getElementById("emptyCartView");
+            const checkoutPanel = document.getElementById("cartCheckoutPanel");
+            const subtotalEl = document.getElementById("cartSubtotal");
+            const grandTotalEl = document.getElementById("cartGrandTotal");
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            if (badge) badge.textContent = totalItems;
+
+            if (cart.length === 0) {
+                if (list) list.innerHTML = "";
+                if (emptyView) emptyView.classList.remove("hidden");
+                if (checkoutPanel) checkoutPanel.classList.add("hidden");
+                return;
+            }
+
+            if (emptyView) emptyView.classList.add("hidden");
+            if (checkoutPanel) checkoutPanel.classList.remove("hidden");
+
+            let subtotal = 0;
+            if (list) {
+                list.innerHTML = cart.map((item, idx) => {
+                    const itemTotal = item.price * item.qty;
+                    subtotal += itemTotal;
+                    return `
+                        <div class="flex items-center justify-between p-3 bg-brand-50/60 rounded-2xl border border-brand-100">
+                            <div class="flex items-center space-x-3">
+                                <img src="${item.image}" alt="${item.name}" class="w-14 h-14 object-cover rounded-xl">
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-800 line-clamp-1">${item.name}</h4>
+                                    <p class="text-[10px] text-brand-muted">${item.variant}</p>
+                                    <p class="text-xs font-bold text-brand-600 mt-1">Rs. ${item.price.toLocaleString()} x ${item.qty}</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-end space-y-1">
+                                <button onclick="removeFromCart(${idx})" class="text-brand-muted hover:text-red-500 text-xs p-1">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                                <div class="flex items-center border border-brand-200 rounded-lg bg-white">
+                                    <button onclick="updateCartQty(${idx}, -1)" class="px-2 py-0.5 text-xs font-bold hover:bg-brand-100">-</button>
+                                    <span class="px-2 text-xs font-bold">${item.qty}</span>
+                                    <button onclick="updateCartQty(${idx}, 1)" class="px-2 py-0.5 text-xs font-bold hover:bg-brand-100">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            const deliveryFee = 250;
+            const grandTotal = subtotal + deliveryFee;
+
+            if (subtotalEl) subtotalEl.textContent = `Rs. ${subtotal.toLocaleString()}`;
+            if (grandTotalEl) grandTotalEl.textContent = `Rs. ${grandTotal.toLocaleString()}`;
+        }
+
+        /* ==========================================================================
+           8. WHATSAPP AUTOMATED ORDER CHECKOUT ENGINE
+           ========================================================================== */
+        function checkoutOnWhatsApp() {
+            if (cart.length === 0) {
+                showToast("Your cart is empty!");
+                return;
+            }
+
+            const name = document.getElementById("orderName")?.value.trim();
+            const phone = document.getElementById("orderPhone")?.value.trim();
+            const address = document.getElementById("orderAddress")?.value.trim();
+            const city = document.getElementById("orderCity")?.value;
+            const date = document.getElementById("orderDate")?.value;
+            const note = document.getElementById("orderNote")?.value.trim();
+
+            if (!name || !phone || !address) {
+                showToast("Please fill in Name, Phone, and Address.");
+                return;
+            }
+
+            let subtotal = 0;
+            let itemsListStr = "";
+
+            cart.forEach((item, i) => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                itemsListStr += `${i + 1}. ${item.name} (${item.variant}) x ${item.qty} = Rs. ${itemTotal.toLocaleString()}\n`;
+            });
+
+            const deliveryFee = 250;
+            const grandTotal = subtotal + deliveryFee;
+
+            // Formatted plain text string for WhatsApp
+            let message = `Assalamualaikum MehakByJiya! I would like to place an order.\n\n`;
+            message += `*ORDER DETAILS:*\n${itemsListStr}\n`;
+            message += `*Subtotal:* Rs. ${subtotal.toLocaleString()}\n`;
+            message += `*Delivery Fee:* Rs. ${deliveryFee}\n`;
+            message += `*Total Amount:* Rs. ${grandTotal.toLocaleString()}\n\n`;
+            message += `*CUSTOMER INFORMATION:*\n`;
+            message += `*Name:* ${name}\n`;
+            message += `*Phone:* ${phone}\n`;
+            message += `*Address:* ${address}\n`;
+            message += `*City:* ${city}\n`;
+            if (date) message += `*Preferred Delivery Date:* ${date}\n`;
+            if (note) message += `*Card Note / Instructions:* ${note}\n`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function directOrderWhatsApp(productId) {
+            const product = PRODUCTS_DATA.find(p => p.id === productId);
+            if (!product) return;
+
+            let message = `Assalamualaikum MehakByJiya! I am interested in purchasing:\n\n`;
+            message += `*Product:* ${product.name}\n`;
+            message += `*Category:* ${product.category}\n`;
+            message += `*Price:* Rs. ${product.price.toLocaleString()}\n\n`;
+            message += `Please confirm availability and delivery timelines. Thank you!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function sendCustomInquiry() {
+            const name = document.getElementById("customName")?.value.trim() || "Valued Customer";
+            const occasion = document.getElementById("customOccasion")?.value.trim() || "Special Occasion";
+            const budget = document.getElementById("customBudget")?.value;
+            const idea = document.getElementById("customIdea")?.value.trim() || "Not specified";
+
+            let message = `Assalamualaikum MehakByJiya! I would like to discuss a *Custom Order*.\n\n`;
+            message += `*Name:* ${name}\n`;
+            message += `*Occasion:* ${occasion}\n`;
+            message += `*Estimated Budget:* ${budget}\n`;
+            message += `*Gift Details/Idea:* ${idea}\n\n`;
+            message += `Please let me know how we can proceed!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        /* ==========================================================================
+           9. TOAST NOTIFICATIONS HELPER
+           ========================================================================== */
+        function showToast(msg) {
+            const container = document.getElementById("toastContainer");
+            if (!container) return;
+
+            const toast = document.createElement("div");
+            toast.className = "toast-entry bg-brand-800 text-white text-xs font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center space-x-2 border border-brand-gold/40 pointer-events-auto";
+            toast.innerHTML = `
+                <i class="fa-solid fa-sparkles text-brand-gold"></i>
+                <span>${msg}</span>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove("toast-entry");
+                toast.classList.add("toast-exit");
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        /* ==========================================================================
+           10. WINDOW ONLOAD INITIALIZATION
+           ========================================================================== */
+        window.onload = function() {
+            initCart();
+            renderCategories();
+            filterProducts();
+
+            // Set default delivery date input to 7 days in advance
+            const dateInput = document.getElementById("orderDate");
+            if (dateInput) {
+                const targetDate = new Date();
+                targetDate.setDate(targetDate.getDate() + 7);
+                dateInput.value = targetDate.toISOString().split('T')[0];
+            }
+        };
+    </script>
+</body>
+</html>
